@@ -94,7 +94,7 @@ export default function Banner() {
           <Box
             key={index}
             height={['30vh','40vh','50vh','90vh']}
-            mt={'115px'}
+            mt={'108px'}
             width={'100vw'}
             position="relative"
             backgroundPosition="top center"
