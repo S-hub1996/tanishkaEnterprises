@@ -15,10 +15,13 @@ import {
   MenuDivider,
   useDisclosure,
   useColorModeValue,
+  Image,
   Stack,
 } from '@chakra-ui/react'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
+import light from '../assets/Logolight.png'
+import dark from '../assets/Logodark.png'
 
 
 
@@ -48,8 +51,8 @@ export default function Navbar() {
 
   return (
     <>
-      <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
+      <Box position={'fixed'} w={'full'}   zIndex={2} mt={'37px'} bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+        <Flex h={16} alignItems={'center'} justifyContent={'space-between'} mx={[0,10,20,30,40]}>
           <IconButton
             size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -58,7 +61,7 @@ export default function Navbar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Code>TanishkaEnterprises</Code>
+            <Box><Image src={useColorModeValue(light, dark)} mt={12} height={'360px'}/></Box>
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>

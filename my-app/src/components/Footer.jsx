@@ -11,10 +11,13 @@ import {
   Input,
   IconButton,
   useColorModeValue,
+  Image
 } from '@chakra-ui/react'
 import { ReactNode } from 'react'
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa'
 import { BiMailSend } from 'react-icons/bi'
+import light from '../assets/Logolight.png'
+import dark from '../assets/Logodark.png'
 
 const Logo = (props) => {
   return (
@@ -76,9 +79,7 @@ export default function Footer() {
           templateColumns={{ sm: '1fr 1fr', md: '2fr 1fr 1fr 2fr' }}
           spacing={8}>
           <Stack spacing={6}>
-            <Box>
-              <Logo color={useColorModeValue('gray.700', 'white')} />
-            </Box>
+          <Box><Image src={useColorModeValue(light, dark)} mt={12} height={'360px'}/></Box>
             <Text fontSize={'sm'}>© 2022 Chakra Templates. All rights reserved</Text>
             <Stack direction={'row'} spacing={6}>
               <SocialButton label={'Twitter'} href={'#'}>
