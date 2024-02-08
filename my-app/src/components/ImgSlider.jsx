@@ -5,7 +5,6 @@ import './slider.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { SlideCard } from './SlideCard';
-
 import Loading from './Loading';
 const ImgSlider = ({pack}) => {
   
@@ -88,7 +87,9 @@ const ImgSlider = ({pack}) => {
         <Slider {...settings}>
         {pack.length? pack.map((Props)=>{
       return  <SlideCard Props={Props} key={Props.id}/>
-    }): <Center> <Loading/></Center>}
+    }): <Center> <Loading/></Center>
+    
+    }
          
         </Slider>
       </Box>
