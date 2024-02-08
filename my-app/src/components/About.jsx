@@ -16,8 +16,6 @@ import { GoGraph } from "react-icons/go";
 import { BiRupee } from "react-icons/bi";
 import { SearchIcon } from "@chakra-ui/icons";
 
-import { ReactElement } from 'react'
-
 const Feature = ({ text, icon, iconBg }) => {
   return (
     <Stack direction={'row'} align={'center'}>
@@ -45,7 +43,7 @@ export default function About() {
             rounded={'md'}>
             Our Story
           </Text>
-          <Heading>A Sports wear whole-selling and manufacturing brand.</Heading>
+          <Heading>A Sports wear whole-selling and manufacturing brand</Heading>
           <Text color={'gray.500'} fontSize={'lg'}>
           
 Welcome to Tanishka Enterprises Ltd. - Your Premier Destination for Quality Sports Wear Wholesale and Manufacturing in New Delhi

@@ -1,4 +1,4 @@
-import ReactDOM from "react-dom/client";
+// import ReactDOM from "react-dom/client";
 import React from 'react';
 import {
   Box,
@@ -20,14 +20,13 @@ function App() {
       <MarqueeSlider />
       <Navbar />
       <Routes>
-            <Route path="/" element={<Home />}>
-                <Route path="/men" element={<Mens />} />
-                <Route path="/women" element={<Women />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/contact" element={<Contact />} />
-                {/* <Route path="*" /> */}
-            </Route>
-        </Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/men" element={<Mens />} />
+        <Route path="/women" element={<Women />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        {/* <Route path="*" /> */}
+      </Routes>
       <Footer />
 
     </Box>

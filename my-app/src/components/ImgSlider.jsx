@@ -1,5 +1,5 @@
-import { Box, Center, Image } from '@chakra-ui/react';
-import React, { useEffect } from 'react'
+import { Box, Center } from '@chakra-ui/react';
+import React from 'react'
 import Slider from "react-slick";
 import './slider.css'
 import "slick-carousel/slick/slick.css";
@@ -12,7 +12,7 @@ const ImgSlider = ({pack}) => {
       dots: true,
       infinite: true,
       speed: 500,
-      slidesToShow: 3,
+      slidesToShow: 4,
       slidesToScroll: 3,
       initialSlide: 0,
       arrows: true,
@@ -21,8 +21,8 @@ const ImgSlider = ({pack}) => {
         {
           breakpoint: 1500,
           settings: {
-            slidesToShow: 3,
-            slidesToScroll: 3,
+            slidesToShow: 4,
+            slidesToScroll: 1,
             infinite: true,
             dots: true,
             autoplay:true,

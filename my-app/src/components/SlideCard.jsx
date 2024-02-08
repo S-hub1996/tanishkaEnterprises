@@ -1,14 +1,15 @@
-import { HStack, Image, Text, VStack,useColorMode } from '@chakra-ui/react';
+import { Image, Text, VStack } from '@chakra-ui/react';
 import React from 'react'
 import { Link } from 'react-router-dom';
 
 export const SlideCard = ({Props}) => {
-    console.log(Props)
-    const {title,image}= Props
-    console.log(title)
+    // console.log(Props)
+    const {title,image,id}= Props
+    // console.log(title)
     return (
         <>
-        {/* <Link to={'/mens'}> */}
+        {/* <Link to={`${id}`}> */}
+        <Link to={`/men`}>
       <VStack
         w="１００％"
         h="420px"
@@ -24,7 +25,7 @@ export const SlideCard = ({Props}) => {
         </Text>
       </VStack>
 
-        {/* </Link> */}
+        </Link>
         
           </>
     );

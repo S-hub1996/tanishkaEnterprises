@@ -1,5 +1,5 @@
 // import Marquee, { Motion, randomIntFromInterval } from "react-marquee-slider";
-import { Box, Code, useColorModeValue } from "@chakra-ui/react";
+import { Box, Code } from "@chakra-ui/react";
 // import times from "lodash/times";
 import Marquee from "react-fast-marquee";
 

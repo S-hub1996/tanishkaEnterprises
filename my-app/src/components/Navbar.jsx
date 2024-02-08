@@ -5,7 +5,6 @@ import {
   Flex,
   Avatar,
   HStack,
-  Code,
   IconButton,
   Button,
   Menu,
@@ -35,7 +34,7 @@ const Links = [
 
 const NavLink = (props) => {
   const { children } = props
-
+  console.log(children)
   return (
     <Box
       as="a"
@@ -68,17 +67,17 @@ export default function Navbar() {
           />
           <HStack spacing={8} alignItems={'center'}>
             <Link to='/'>
-<Box>
+              <Box>
 
-            <Image src={useColorModeValue(light, dark)} mt={12} height={'360px'} />
-</Box>
+                <Image src={useColorModeValue(light, dark)} mt={12} height={'360px'} />
+              </Box>
 
             </Link>
 
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
                 <Link to={`/${link.id}`}>
-                <NavLink key={link.id}>{link.name}</NavLink>
+                  <NavLink key={link.id}>{link.name}</NavLink>
                 </Link>
               ))}
             </HStack>
@@ -116,7 +115,7 @@ export default function Navbar() {
               {Links.map((link) => (
                 <Link to={`/${link.id}`}>
                 <NavLink key={link.id}>{link.name}</NavLink>
-                </Link>
+              </Link>
               ))}
             </Stack>
           </Box>

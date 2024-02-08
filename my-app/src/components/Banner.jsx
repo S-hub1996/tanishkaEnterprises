@@ -3,12 +3,6 @@
 import React from 'react'
 import {
   Box,
-  IconButton,
-  useBreakpointValue,
-  Stack,
-  Heading,
-  Text,
-  Container,
 } from '@chakra-ui/react'
 // Here we have used react-icons package for the icons
 // import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi'
@@ -38,8 +32,8 @@ export default function Banner() {
 
   // These are the breakpoints which changes the position of the
   // buttons as the screen size changes
-  const top = useBreakpointValue({ base: '90%', md: '50%' })
-  const side = useBreakpointValue({ base: '30%', md: '40px' })
+  // const top = useBreakpointValue({ base: '90%', md: '50%' })
+  // const side = useBreakpointValue({ base: '30%', md: '40px' })
 
   // This list contains all the data for carousels
   // This can be static or loaded from a server
@@ -47,7 +41,7 @@ export default function Banner() {
     {
       title: 'Tanishka Enterprises Ltd.',
       text: "Welcome to Tanishka Enterprises Ltd. - Your Premier Destination for Quality Sports Wear Wholesale and Manufacturing in New Delhi",
-      image:one,
+      image: one,
     },
     {
       title: 'Tanishka Enterprises Ltd.',
@@ -70,12 +64,12 @@ export default function Banner() {
   ]
 
   return (
-    <Box 
+    <Box
       position={"relative"}
       // height={""}
       // width={"full"}
       overflow={"hidden"}
-      >
+    >
       {/* CSS files for react-slick */}
       <link
         rel="stylesheet"
@@ -93,7 +87,7 @@ export default function Banner() {
         {cards.map((card, index) => (
           <Box
             key={index}
-            height={['30vh','40vh','50vh','90vh']}
+            height={['30vh', '40vh', '50vh','70vh']}
             mt={'108px'}
             width={'100vw'}
             position="relative"
@@ -103,7 +97,7 @@ export default function Banner() {
             backgroundImage={card.image}>
             {/* This is the block you need to change, to customize the caption */}
             {/* <Container size="container.lg" height="auto" position="relative"> */}
-              {/* <Stack
+            {/* <Stack
                 spacing={6}
                 w={'full'}
                 maxW={'lg'}
