@@ -77,9 +77,9 @@ Welcome to Tanishka Enterprises Ltd. - Your Premier Destination for Quality Spor
             rounded={'md'}
             alt={'feature image'}
             src={
-              'https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+              'https://imgs.search.brave.com/IUAPlMmXTIW5PDv5HeBG5kSJoObp88T2_qbsCg0xxco/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93d3cu/c3BvcnRzd2Vhcm1m/Zy5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMTkvMDkvb3V0/ZG9vci1mYWJyaWNz/LW1hbnVmYWN0dXJl/ci1wcm9jZXNzLmpw/Zw'
             }
-            objectFit={'cover'}
+            objectFit={'contain'}
           />
         </Flex>
       </SimpleGrid>
