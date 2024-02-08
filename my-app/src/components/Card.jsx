@@ -73,12 +73,12 @@ function ProductCard({data}) {
 
           <Flex justifyContent="space-between" alignContent="center">
             
-            {/* <Box fontSize="2xl" color={useColorModeValue('gray.800', 'white')}>
+            <Box fontSize="2xl" color={useColorModeValue('gray.800', 'white')}>
               <Box as="span" color={'gray.600'} fontSize="lg">
-                £
+              ₹
               </Box>
-              {data.price.toFixed(2)}
-            </Box> */}
+              {2000}
+            </Box>
           </Flex>
         </Box>
       </Box>
