@@ -8,7 +8,7 @@ export const SlideCard = ({Props}) => {
     console.log(title)
     return (
         <>
-        {/* <Link to={`/packages/${Props.title}`}> */}
+        {/* <Link to={'/mens'}> */}
       <VStack
         w="１００％"
         h="420px"

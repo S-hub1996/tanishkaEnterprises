@@ -22,10 +22,16 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import { ColorModeSwitcher } from '../ColorModeSwitcher';
 import light from '../assets/Logolight.png'
 import dark from '../assets/Logodark.png'
+import { Link } from 'react-router-dom'
 
 
+const Links = [
+  { name: "MEN", id: "men" },
+  { name: "WOMEN", id: "women" },
+  { name: "ABOUT ", id: "about" },
+  { name: "CONTACT ", id: "contact" },
 
-const Links = ['MEN', 'WOMEN','ABOUT', 'CONTACT']
+];
 
 const NavLink = (props) => {
   const { children } = props
@@ -51,8 +57,8 @@ export default function Navbar() {
 
   return (
     <>
-      <Box position={'fixed'} w={'full'}   zIndex={2} mt={'37px'} bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
-        <Flex h={16} alignItems={'center'} justifyContent={'space-between'} mx={[0,10,20,30,40]}>
+      <Box position={'fixed'} w={'full'} zIndex={2} mt={'37px'} bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+        <Flex h={16} alignItems={'center'} justifyContent={'space-between'} mx={[0, 10, 20, 30, 40]}>
           <IconButton
             size={'md'}
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -61,10 +67,19 @@ export default function Navbar() {
             onClick={isOpen ? onClose : onOpen}
           />
           <HStack spacing={8} alignItems={'center'}>
-            <Box><Image src={useColorModeValue(light, dark)} mt={12} height={'360px'}/></Box>
+            <Link to='/'>
+<Box>
+
+            <Image src={useColorModeValue(light, dark)} mt={12} height={'360px'} />
+</Box>
+
+            </Link>
+
             <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <Link to={`/${link.id}`}>
+                <NavLink key={link.id}>{link.name}</NavLink>
+                </Link>
               ))}
             </HStack>
           </HStack>
@@ -99,14 +114,16 @@ export default function Navbar() {
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as={'nav'} spacing={4}>
               {Links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <Link to={`/${link.id}`}>
+                <NavLink key={link.id}>{link.name}</NavLink>
+                </Link>
               ))}
             </Stack>
           </Box>
         ) : null}
       </Box>
 
-    
+
     </>
   )
 }

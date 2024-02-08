@@ -119,6 +119,11 @@ const women=[
         image:women9,
         title:`Women's Gym Wear`
     },
+    {
+        id:'10',
+        image:women10,
+        title:`Women's Gym Wear`
+    },
 ]
 
     return (
